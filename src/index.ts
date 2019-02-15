@@ -10,5 +10,5 @@ export {
 export {
   ScrollSpyService,
 } from './app/scroll-spy/scroll-spy-service/scroll-spy.service';
-export { Spy } from './app/scroll-spy/shared/spy.model';
+export { Spy, SpyActiveChange } from './app/scroll-spy/shared/spy.model';
 export { ScrollSpyModule } from './app/scroll-spy/scroll-spy.module';

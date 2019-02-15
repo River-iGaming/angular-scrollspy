@@ -5,3 +5,8 @@ export interface Spy {
   id: string;
   items: QueryList<ScrollSpyItemDirective>;
 }
+
+export interface SpyActiveChange {
+  id: string;
+  isActive: boolean;
+}

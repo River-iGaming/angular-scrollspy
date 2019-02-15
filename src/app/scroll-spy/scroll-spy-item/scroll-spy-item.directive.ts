@@ -1,9 +1,12 @@
 import {
   Directive,
   Input,
+  Output,
+  EventEmitter,
   HostBinding,
   ChangeDetectorRef,
 } from '@angular/core';
+import { SpyActiveChange } from '../shared/spy.model';
 
 /**
  * A directive used to add an `active` class to a nav item
@@ -26,7 +29,22 @@ export class ScrollSpyItemDirective {
    * @memberof ScrollSpyItemDirective
    */
   @HostBinding('class.active')
-  public active = false;
+  public get active(): boolean {
+    return this._active;
+  }
+
+  public set active(isActive: boolean) {
+    if (isActive) {
+      this.activeChange.emit({
+        id: this.href,
+        isActive: isActive,
+      });
+    }
+    this._active = isActive;
+  }
+
+  private _active: boolean;
+
   /**
    * ID of `ScrollSpyDirective` instance
    *
@@ -56,6 +74,9 @@ export class ScrollSpyItemDirective {
   public get section(): string {
     return this.href.replace('#', '');
   }
+
+  @Output() activeChange = new EventEmitter<SpyActiveChange>();
+
   /**
    * Creates an instance of ScrollSpyItemDirective.
    * @memberof ScrollSpyItemDirective
