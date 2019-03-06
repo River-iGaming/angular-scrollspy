@@ -1,5 +1,5 @@
 {
-  "name": "@cerberus/angular-scrollspy",
+  "name": "@odin/angular-scrollspy",
   "version": "2.2.5",
   "private": false,
   "description": "A simple lightweight library for Angular which automatically updates links to indicate the currently active section in the viewport",
@@ -22,7 +22,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/thisissoon/angular-scrollspy"
+    "url": "https://github.com/River-iGaming/angular-scrollspy"
   },
   "engines": {
     "node": ">= 8.9.0",

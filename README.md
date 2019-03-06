@@ -17,7 +17,7 @@ This is a simple library for [Angular][angular], implemented in the [Angular Pac
 
 ```ts
 import { InViewportModule } from '@thisissoon/angular-inviewport';
-import { ScrollSpyModule } from '@thisissoon/angular-scrollspy';
+import { ScrollSpyModule } from '@odin/angular-scrollspy';
 
 @NgModule({
   imports: [InViewportModule, ScrollSpyModule.forRoot()],
@@ -27,7 +27,7 @@ export class AppModule {}
 
 ## Example
 
-A working example can be found in the [src](https://github.com/thisissoon/angular-scrollspy/tree/master/src) folder.
+A working example can be found in the [src](https://github.com/River-iGaming/angular-scrollspy/tree/master/src) folder.
 
 `app.component.html`
 
